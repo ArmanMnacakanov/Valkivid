@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900">
+    <header
+        class=" w-[100%] my-[20px] mx-auto py-5 px-7 flex justify-between items-center gap-10 max-lg:relative max-lg:shadow-xl z-10">
+        <div class="logo">
+            <svg width="80" height="20" viewBox="0 0 82 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M19.908 20.001H19.231C17.745 20.001 16.597 19.603 15.789 18.806C14.98 18.01 14.576 16.863 14.576 15.364V10.13C14.576 8.632 14.98 7.484 15.789 6.688C16.597 5.891 17.745 5.493 19.231 5.493H25.75C26.163 5.493 26.37 5.692 26.37 6.091V19.405C26.37 19.803 26.163 20.003 25.75 20.003H23.38C22.985 20.003 22.787 19.804 22.787 19.405V18.466H22.674C22.467 18.979 22.1 19.362 21.573 19.619C21.046 19.873 20.491 20.001 19.908 20.001ZM22.786 14.71V8.934C22.786 8.726 22.673 8.621 22.447 8.621H19.795C19.193 8.621 18.77 8.749 18.525 9.005C18.28 9.261 18.157 9.693 18.157 10.299V15.193C18.157 15.799 18.28 16.23 18.525 16.486C18.769 16.743 19.192 16.871 19.795 16.871H20.839C22.137 16.871 22.786 16.15 22.786 14.71Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M31.477 20.001H29.079C28.684 20.001 28.486 19.802 28.486 19.403V0.598999C28.486 0.200999 28.684 0.000999451 29.079 0.000999451H31.477C31.872 0.000999451 32.069 0.199999 32.069 0.598999V19.404C32.069 19.802 31.872 20.001 31.477 20.001Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M37.176 20.001H34.778C34.383 20.001 34.186 19.802 34.186 19.403V0.598999C34.186 0.200999 34.383 0.000999451 34.778 0.000999451H37.176C37.571 0.000999451 37.769 0.199999 37.769 0.598999V19.404C37.769 19.802 37.571 20.001 37.176 20.001ZM42.425 5.492H45.162C45.387 5.492 45.538 5.559 45.613 5.691C45.688 5.824 45.66 5.995 45.529 6.203L41.776 12.433V12.547L45.698 19.289C45.811 19.478 45.82 19.643 45.726 19.787C45.631 19.929 45.462 20 45.218 20H42.791C42.471 20 42.241 19.963 42.101 19.886C41.959 19.81 41.814 19.65 41.663 19.403L38.079 13.059C37.91 12.755 37.91 12.443 38.079 12.12L41.465 6.061C41.672 5.682 41.992 5.492 42.425 5.492Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M46.516 19.403V6.089C46.516 5.691 46.704 5.491 47.08 5.491H49.506C49.902 5.491 50.099 5.69 50.099 6.089V19.403C50.099 19.65 50.057 19.811 49.972 19.886C49.888 19.962 49.743 20 49.534 20H47.108C46.713 20.001 46.516 19.802 46.516 19.403Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M51.594 5.492H54.078C54.454 5.492 54.679 5.691 54.755 6.09L57.182 16.787H57.379L59.749 6.09C59.824 5.692 60.06 5.492 60.454 5.492H62.937C63.332 5.492 63.473 5.691 63.361 6.09L59.805 19.376C59.73 19.792 59.477 20 59.044 20H55.46C55.065 20 54.812 19.792 54.698 19.375L51.171 6.089C51.059 5.691 51.2 5.492 51.594 5.492Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M64.433 19.403V6.089C64.433 5.691 64.621 5.491 64.997 5.491H67.424C67.819 5.491 68.016 5.69 68.016 6.089V19.403C68.016 19.65 67.974 19.811 67.889 19.886C67.805 19.962 67.659 20 67.451 20H65.025C64.63 20.001 64.433 19.802 64.433 19.403Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M75.408 20.001H74.252C72.803 20.001 71.707 19.603 70.965 18.806C70.221 18.01 69.85 16.863 69.85 15.364V10.13C69.85 8.632 70.221 7.484 70.965 6.688C71.707 5.891 72.803 5.493 74.252 5.493H75.408C75.991 5.493 76.547 5.621 77.073 5.877C77.599 6.133 77.967 6.517 78.174 7.029H78.287V0.598999C78.287 0.200999 78.484 0.000999451 78.881 0.000999451H81.278C81.673 0.000999451 81.871 0.199999 81.871 0.598999V19.404C81.871 19.802 81.673 20.002 81.278 20.002H78.881C78.485 20.002 78.287 19.803 78.287 19.404V18.465H78.174C77.967 18.978 77.6 19.361 77.073 19.618C76.547 19.873 75.991 20.001 75.408 20.001ZM78.286 14.71V10.783C78.286 9.342 77.638 8.621 76.341 8.621H75.07C74.467 8.621 74.045 8.749 73.8 9.005C73.555 9.261 73.432 9.693 73.432 10.299V15.193C73.432 15.799 73.554 16.231 73.8 16.487C74.043 16.744 74.466 16.872 75.07 16.872H76.341C77.638 16.871 78.286 16.15 78.286 14.71Z">
+                </path>
+                <path class="fill-accent"
+                    d="M46.516 3.045V0.569999C46.516 0.190999 46.704 0.000999451 47.08 0.000999451H49.534C49.911 0.000999451 50.098 0.181999 50.098 0.541999V3.046C50.098 3.425 49.91 3.615 49.534 3.615H47.08C46.703 3.614 46.516 3.425 46.516 3.045Z">
+                </path>
+                <path class="fill-accent"
+                    d="M64.433 3.045V0.569999C64.433 0.190999 64.621 0.000999451 64.997 0.000999451H67.451C67.828 0.000999451 68.015 0.181999 68.015 0.541999V3.046C68.015 3.425 67.827 3.615 67.451 3.615H64.997C64.62 3.614 64.433 3.425 64.433 3.045Z">
+                </path>
+                <path class="fill-gray-900 dark:fill-white"
+                    d="M3.398 9.838H6.42101L5.413 16.443L11.459 6.79H8.436L11.642 1.71H14.483L9.94801 19.999H4.406L-0.128998 1.71H4.346L3.398 9.838Z">
+                </path>
+            </svg>
+        </div>
+        <nav id="navMenu"
+            class="  max-lg:absolute max-lg:px-5 max-lg:top-[100%] max-lg:right-0 max-lg:w-[300px]  max-lg:max-h-0 max-sm:w-[100%] transition-all duration-300 ease-linear max-lg:bg-gray-900  max-lg:overflow-hidden max-lg:shadow-2xl">
+            <ul class="flex justify-center gap-2 max-lg:flex-col">
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">home</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">streams</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">blog</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">about</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">sponsors</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">events</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">contact</a></li>
+                <li><a class="text-white text-sm py-3 text-center block px-7 max-xl:px-4 max-xl:text-xs bg-violet-700 uppercase transition-all ease-linear hover:bg-violet-600 shadow-md hover:-translate-y-1 -skew-x-12 max-sm:-skew-x-0 max-sm:rounded-lg hover:shadow-slate-950 hover:shadow-xl"
+                        href="#">shop</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <ul class="flex gap-2 justify-center items-center max-lg:gap-4">
+                <li><button
+                        class="w-[45px] aspect-square cursor-pointer rounded-full bg-violet-700 uppercase shadow-lg transition-all text-white ease-linear hover:bg-violet-600"
+                        id="dark"><i class="fa-solid fa-sun"></i></button></li>
+                <li><button
+                        class="w-[45px] aspect-square cursor-pointer rounded-full bg-violet-700 uppercase shadow-lg transition-all text-white ease-linear hover:bg-violet-600"
+                        id="shopbag"><i class="fa-solid fa-bag-shopping"></i></button></li>
+                <li><button
+                        class="w-[45px] aspect-square cursor-pointer rounded-full bg-violet-700 uppercase shadow-lg transition-all text-white ease-linear hover:bg-violet-600"
+                        id="user"><i class="fa-regular fa-user"></i></button></li>
+                <li>
+                    <button id="menu_btn" class="hidden max-lg:block text-2xl w-[45px] text-white cursor-pointer"><i
+                            class="fa-solid fa-bars"></i></button>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <section
+        class="w-[70%] h-[500px] my-7 mx-auto relative rounded-2xl shadow-gray-950 shadow-xl bg-zinc-900 overflow-hidden max-xl:w-[90%] max-lg:h-[350px] max-sm:h-[260px] max-2xl:w-[95%]">
+        <div
+            class="absolute w-[100%] h-[100%] inset-0 bg-gradient-to-tr from-zinc-950 flex justify-center items-start p-9 flex-col gap-4">
+            <h1 class="text-white text-6xl uppercase max-lg:text-4xl max-sm:text-2xl">neko <span
+                    class="text-cyan-400">magic</span></h1>
+            <p class="text-white text-2xl w-[500px] max-lg:text-xl max-sm:text-xs max-sm:w-[300px]">Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Deserunt nisi, aspernatur ullam a repudiandae
+                praesentium incidunt nihil officiis ab accusamus?</p>
+            <button
+                class="bg-violet-700 uppercase text-white rounded-sm -skew-x-12 shadow-xl shadow-black py-3 px-7 transition-all ease-linear hover:bg-violet-600 hover:translate-x-2 max-sm:py-2 max-sm:px-5 max-sm:text-xs">subscribe</button>
+        </div>
+        <img class="w-[100%] h-[100%] object-cover"
+            src="https://wallpapercat.com/w/full/1/6/b/6644-3840x2160-desktop-4k-assassins-creed-background.jpg" alt="">
+    </section>
+
+    <section class="w-[100%] h-auto p-10 max-sm:p-5">
+        <ul class="w-[100%] flex justify-center items-center gap-5 max-lg:gap-4 max-lg:flex-wrap max-sm:gap-2">
+            <li
+                class="overflow-hidden shadow-lg transition-all ease-linear hover:scale-110 hover:shadow-black hover:shadow-xl rounded-xl shadow-zinc-950">
+                <a class="block py-2 px-5 max-lg:w-[180px] max-sm:w-[160px]  bg-black" href="#"><img
+                        class="w-[100%] h-[100%] object-cover opacity-25 transition-all ease-linear hover:opacity-100"
+                        src="https://valkivid.dan-fisher.dev/assets/img/str1/sponsor-1-md.png"></a>
+            </li>
+            <li
+                class="overflow-hidden shadow-lg transition-all ease-linear hover:scale-110 hover:shadow-black hover:shadow-xl rounded-xl shadow-zinc-950">
+                <a class="block py-2 px-5 max-lg:w-[180px] max-sm:w-[160px]  bg-black" href="#"><img
+                        class="w-[100%] h-[100%] object-cover opacity-25 transition-all ease-linear hover:opacity-100"
+                        src="https://valkivid.dan-fisher.dev/assets/img/str1/sponsor-2-md.png"></a>
+            </li>
+            <li
+                class="overflow-hidden shadow-lg transition-all ease-linear hover:scale-110 hover:shadow-black hover:shadow-xl rounded-xl shadow-zinc-950">
+                <a class="block py-2 px-5 max-lg:w-[180px] max-sm:w-[160px]  bg-black" href="#"><img
+                        class="w-[100%] h-[100%] object-cover opacity-25 transition-all ease-linear hover:opacity-100"
+                        src="https://valkivid.dan-fisher.dev/assets/img/str1/sponsor-3-md.png"></a>
+            </li>
+            <li
+                class="overflow-hidden shadow-lg transition-all ease-linear hover:scale-110 hover:shadow-black hover:shadow-xl rounded-xl shadow-zinc-950">
+                <a class="block py-2 px-5 max-lg:w-[180px] max-sm:w-[160px]  bg-black" href="#"><img
+                        class="w-[100%] h-[100%] object-cover opacity-25 transition-all ease-linear hover:opacity-100"
+                        src="https://valkivid.dan-fisher.dev/assets/img/str1/sponsor-4-md.png"></a>
+            </li>
+            <li
+                class="overflow-hidden shadow-lg transition-all ease-linear hover:scale-110 hover:shadow-black hover:shadow-xl rounded-xl shadow-zinc-950">
+                <a class="block py-2 px-5 max-lg:w-[180px] max-sm:w-[160px]  bg-black" href="#"><img
+                        class="w-[100%] h-[100%] object-cover opacity-25 transition-all ease-linear hover:opacity-100"
+                        src="https://valkivid.dan-fisher.dev/assets/img/str1/sponsor-5-md.png"></a>
+            </li>
+            <li
+                class="overflow-hidden shadow-lg transition-all ease-linear hover:scale-110 hover:shadow-black hover:shadow-xl rounded-xl shadow-zinc-950">
+                <a class="block py-2 px-5 max-lg:w-[180px] max-sm:w-[160px]  bg-black" href="#"><img
+                        class="w-[100%] h-[100%] object-cover opacity-25 transition-all ease-linear hover:opacity-100"
+                        src="https://valkivid.dan-fisher.dev/assets/img/str1/sponsor-6-md.png"></a>
+            </li>
+        </ul>
+    </section>
+
+    <section
+        class="w-[70%] h-[300px] m-auto flex  bg-cover relative overflow-hidden rounded-2xl shadow-xl shadow-slate-950 max-xl:w-[90%] max-lg:h-[350px] max-sm:h-[260px] max-2xl:w-[95%]">
+        <img class="w-[100%] h-[100%]  object-cover"
+            src="https://4kwallpapers.com/images/wallpapers/assassins-creed-3840x1080-17081.jpeg" alt="">
+        <div class=" w-[100%] h-[100%] flex gap-3 flex-col justify-center absolute p-12 bg-gradient-to-r from-black">
+            <h3 class="text-white">Next Stream</h3>
+            <h1 class="text-white text-3xl max-lg:text-4xl max-sm:text-xl">Let’s Play: <span
+                    class="text-5xl text-cyan-500 italic max-lg:text-4xl max-sm:text-2xl">Assassins creed shadows</span>
+            </h1>
+            <p class="text-white w-[400px] max-lg:text-xl max-sm:text-xs max-sm:w-[300px]">I’ll be playing the new DLC
+                for Witch Hunters story mode. I’ll be with guest streamer Game-Huntress. See
+                you there!</p>
+        </div>
+    </section>
+
+    <section class="w-[80%] h-auto px-5 py-40 max-sm:py-20 flex justify-center max-2xl:justify-around max-lg:justify-center items-center gap-10 m-auto max-2xl:w-[100%]  max-lg:flex-col max-sm:gap-24">
+        <div class="relative w-[650px] h-[400px] max-sm:h-[200px]  max-lg:w-[80%] max-sm:w-[100%]">
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/206/90/desktop-wallpaper-07-22-15-mincraft-gaming.jpg" class="absolute w-[600px] max-2xl:w-[100%] max-lg:static shadow-xl shadow-slate-950 rounded-lg"  alt="">
+            <img src="https://rare-gallery.com/thumbnail/397289-wallpaper-cyberpunk-2077-judy-alvarez-4k-hd.jpg" class="absolute w-[400px] max-sm:translate-x-0  max-sm:top-28 max-2xl:w-[60%] max-lg:top-48  top-52 translate-x-64 max-lg:translate-x-72 shadow-xl shadow-slate-950 rounded-lg" alt="">
+        </div>
+        <div class="w-[500px] flex flex-col gap-12 max-lg:w-[80%] max-sm:w-[100%] max-sm:gap-6 max-lg:h-auto">
+            <h1 class="text-white text-5xl -translate-x-40 max-xl:text-3xl max-xl:-translate-x-0">Reliving the Magic of
+                <span class="text-cyan-500">Retro</span> & <span class="text-cyan-500">Arcade Games</span>
+            </h1>
+            <p class="text-white">Twitch is a live streaming video platform owned by Twitch Interactive, a subsidiary of Amazon. Introduced
+                in June 2011 as a spin-off.</p>
+            <p class="text-white">The site primarily focuses on video game live streaming, including broadcasts of eSports competitions, in
+                addition to music broadcasts, creative content, and more recently, "in real life" streams. Content on
+                the site can be viewed either live or via video on demand.</p>
+        </div>
+    </section>
+
+    <section class="w-[70%] h-auto p-5 flex justify-center m-auto items-center flex-col gap-5 max-2xl:w-[100%] max-lg:py-0">
+        <h1 class="text-white uppercase text-4xl">Top <span class="text-cyan-500"> Streamed </span> Games</h1>
+        <div class="stream_games_box w-[100%] h-auto flex justify-center items-start flex-wrap gap-4 overflow-x-auto p-5 max-sm:p-2">
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://upload.wikimedia.org/wikipedia/en/5/54/Assassin%27s_Creed_Shadows_cover.png" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed Shadows</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://www.gematsu.com/wp-content/uploads/2022/09/Game-Page-Box-Art_Assassins-Creed-Codename-Jade-Initis-320x480.jpg" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed Jade</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://scontent-iad3-1.oculuscdn.com/v/t64.5771-25/86629761_181169971732162_7644386520877179353_n.png?_nc_cat=104&ccb=1-7&_nc_sid=6e7a0a&_nc_ohc=xSHbk0YZV_EQ7kNvgH_NsWx&_nc_zt=3&_nc_ht=scontent-iad3-1.oculuscdn.com&oh=00_AYAq2V50tFRFD463tfYUWoIRCeVAlS73RyK0bPbyqw6utg&oe=67167C2D" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed Nexus VR</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://assets-prd.ignimgs.com/2022/09/10/assassins-creed-mirage-button-fin-1662844632503.jpg" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed Mirage</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://upload.wikimedia.org/wikipedia/en/f/ff/Assassin%27s_Creed_Valhalla_cover.jpg" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed Valhalla</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Assassin%27s_Creed_Rogue.jpg" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed Rogue</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://upload.wikimedia.org/wikipedia/en/2/29/Assassin%27s_Creed_III_Game_Cover.jpg" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed III</h3>
+            </div>
+            <div class="game w-[250px] max-sm:before:h-[90%] max-sm:w-[150px] overflow-hidden h-auto flex flex-col cursor-pointer justify-center items-center gap-4 transition-all ease-linear hover:-translate-y-3 relative before:absolute after:w-auto after:transition-all after:opacity-0 after:p-0 after:h-auto after:absolute after:text-center after:text-5xl after:content-['+'] after:text-white before:w-[100%] before:h-[90%] before:top-0 before:bg-gray-950 before:content-[''] before:transition-all before:rounded-xl before:opacity-0 hover:before:opacity-55 hover:after:opacity-100">
+                <img class="w-[100%] h-[300px] max-sm:h-[220px] rounded-xl shadow-xl shadow-slate-950 object-cover" src="https://upload.wikimedia.org/wikipedia/ru/e/ee/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Assassins_Creed_2.jpg" alt="">
+                <h3 class="text-gray-500 max-sm:text-xs">Assassin's Creed II</h3>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuBtn = document.getElementById('menu_btn');
+        const nav = document.getElementById('navMenu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        // Функция для открытия/закрытия меню
+        function toggleMenu() {
+            if (nav.style.maxHeight === '0px' || !nav.style.maxHeight) {
+                nav.style.maxHeight = '420px';
+                nav.style.padding = '20px 20px';
+                menuIcon.className = 'fa-solid fa-xmark';
+            } else {
+                nav.style.padding = '0 20px';
+                nav.style.maxHeight = '0px';
+                menuIcon.className = 'fa-solid fa-bars';
+            }
+        }
+
+        // Инициализация начальных значений и добавление обработчика клика
+        function initMenu() {
+            if (window.innerWidth < 1024) {
+                nav.style.maxHeight = '0px'; // Установка начальной высоты для маленьких экранов
+                menuBtn.addEventListener('click', toggleMenu);
+            } else {
+                nav.style.maxHeight = ''; // Убираем любые ограничения по высоте для больших экранов
+                menuBtn.removeEventListener('click', toggleMenu);
+                menuIcon.className = 'fa-solid fa-bars'; // Возвращаем иконку меню
+            }
+        }
+
+        // Выполнение при загрузке страницы
+        initMenu();
+
+        // Добавляем обработчик на изменение размера окна
+        window.addEventListener('resize', () => {
+            initMenu();
+        });
+
+
+    </script>
+</body>
+
+</html>
